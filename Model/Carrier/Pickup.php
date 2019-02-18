@@ -66,7 +66,7 @@ public function getAllowedMethods()
     return ['pickup' => $this->getConfigData ('name')];
 }
 
-public function collectRates(RateRequest $request)
+public function collectRates(RateRequest $request, $pickup = true)
 {
     if (!$this->getConfigFlag ('active'))
     {
